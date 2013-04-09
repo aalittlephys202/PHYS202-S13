@@ -1,2 +1,10 @@
-pledge text
-Alex Little
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% I pledge on my honor that I have not given
+% or received any unauthorized assistance
+% on this assignment/examination.
+%
+% Signed: Alex Little
+% Dated: <Date>
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
