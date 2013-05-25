@@ -10,17 +10,25 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[       758,         33]
-NotebookOptionsPosition[       560,         21]
-NotebookOutlinePosition[       897,         36]
-CellTagsIndexPosition[       854,         33]
+NotebookDataLength[      1098,         43]
+NotebookOptionsPosition[       829,         29]
+NotebookOutlinePosition[      1166,         44]
+CellTagsIndexPosition[      1123,         41]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Exercise", " ", "2"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.5777251146957684`*^9, 3.577725132243178*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", "A", "*)"}]], "Input",
+ CellChangeTimes->{{3.57772514116669*^9, 3.577725153325143*^9}}]
 },
 WindowSize->{740, 623},
-WindowMargins->{{Automatic, 178}, {70, Automatic}},
+WindowMargins->{{Automatic, 170}, {40, Automatic}},
 FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
 StyleDefinitions->"Default.nb"
 ]
@@ -35,9 +43,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
+Cell[557, 20, 149, 3, 29, "Input"],
+Cell[709, 25, 116, 2, 29, "Input"]
 }
 ]
 *)
 
 (* End of internal cache information *)
-

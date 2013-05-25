@@ -1,0 +1,257 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8513,        247]
+NotebookOptionsPosition[      7756,        216]
+NotebookOutlinePosition[      8093,        231]
+CellTagsIndexPosition[      8050,        228]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"Vy", " ", "=", " ", 
+  RowBox[{"V", " ", 
+   RowBox[{"Sin", "[", "th", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Vx", " ", "=", " ", 
+  RowBox[{"V", " ", 
+   RowBox[{"Cos", "[", "th", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Vter", " ", "=", " ", 
+  RowBox[{"Sqrt", "[", 
+   RowBox[{"2", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"mg", "/", "C"}], "/", "p"}], "/", "A"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.5784233941122*^9, 3.5784233984094753`*^9}, {
+  3.5784238650907917`*^9, 3.578423882441825*^9}, {3.5784241337821903`*^9, 
+  3.5784241818260937`*^9}, {3.5784245454441137`*^9, 3.57842459057261*^9}}],
+
+Cell[BoxData[
+ RowBox[{"5", " ", 
+  RowBox[{"Sin", "[", "30", "]"}]}]], "Output",
+ CellChangeTimes->{3.578424202230879*^9, 3.578424550063747*^9, 
+  3.578424592590312*^9, 3.5784248464976254`*^9}],
+
+Cell[BoxData[
+ RowBox[{"5", " ", 
+  RowBox[{"Cos", "[", "30", "]"}]}]], "Output",
+ CellChangeTimes->{3.578424202230879*^9, 3.578424550063747*^9, 
+  3.578424592590312*^9, 3.578424846518284*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox["2"], " ", 
+  SqrtBox[
+   FractionBox["mg", 
+    RowBox[{"A", " ", "C", " ", "p"}]]]}]], "Output",
+ CellChangeTimes->{3.578424202230879*^9, 3.578424550063747*^9, 
+  3.578424592590312*^9, 3.5784248465455427`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"V", " ", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"th", " ", "=", " ", "30"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t", "]"}], " ", "=", " ", 
+  RowBox[{"yi", " ", "-", 
+   RowBox[{"Vy", "*", "t"}], "-", 
+   RowBox[{
+    RowBox[{"(", "4.9", ")"}], 
+    RowBox[{"t", "^", "2"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "t", "]"}], "=", 
+  RowBox[{"Vx", "*", "t"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"yi", " ", "=", " ", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.578424216776692*^9, 3.578424304446507*^9}, {
+  3.578424343409912*^9, 3.578424345157425*^9}, {3.578424428378152*^9, 
+  3.578424500185699*^9}, {3.578426477485565*^9, 3.578426497868266*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "4.9`"}], " ", 
+   SuperscriptBox["t", "2"]}], "-", 
+  RowBox[{"5", " ", "t", " ", 
+   RowBox[{"Sin", "[", "30", "]"}]}]}]], "Output",
+ CellChangeTimes->{{3.578424485256434*^9, 3.5784245013535757`*^9}, 
+   3.578424554547512*^9, 3.578424852525365*^9, {3.578426484851314*^9, 
+   3.578426518792272*^9}}],
+
+Cell[BoxData[
+ RowBox[{"5", " ", "t", " ", 
+  RowBox[{"Cos", "[", "30", "]"}]}]], "Output",
+ CellChangeTimes->{{3.578424485256434*^9, 3.5784245013535757`*^9}, 
+   3.578424554547512*^9, 3.578424852525365*^9, {3.578426484851314*^9, 
+   3.57842651886513*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"5", " ", "t", " ", 
+      RowBox[{"Cos", "[", "th", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "5"}], "}"}]}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"th", ",", "0", ",", "90"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.578425836126917*^9, 3.578425972330407*^9}, {
+  3.578426005229232*^9, 3.578426039976378*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`th$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`th$$], 0, 90}}, Typeset`size$$ = {360., {113., 117.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`th$1908$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`th$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`th$$, $CellContext`th$1908$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[5 $CellContext`t Cos[$CellContext`th$$], {$CellContext`t, 0, 5}], 
+      "Specifications" :> {{$CellContext`th$$, 0, 90}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {155., 160.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.578425938604313*^9, {3.578425969244557*^9, 3.578425973170993*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4.9"}], 
+       RowBox[{"t", "^", "2"}]}], " ", "-", 
+      RowBox[{"5", " ", "t", " ", 
+       RowBox[{"Sin", "[", "th", "]"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "5"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"th", ",", "0", ",", 
+     RowBox[{"pi", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5784264299404917`*^9, 3.578426457675625*^9}, {
+  3.578426526332814*^9, 3.57842654032432*^9}, {3.578426585041143*^9, 
+  3.578426619961524*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`th$$ = 0. + 
+    0.059000000000000004` $CellContext`pi, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`th$$], 0, Rational[1, 2] $CellContext`pi}}, 
+    Typeset`size$$ = {360., {112., 116.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`th$1977$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`th$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`th$$, $CellContext`th$1977$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[(-4.9) $CellContext`t^2 - 5 $CellContext`t 
+        Sin[$CellContext`th$$], {$CellContext`t, 0, 5}], 
+      "Specifications" :> {{$CellContext`th$$, 0, 
+         Rational[1, 2] $CellContext`pi}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{405., {154., 159.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.578426621053825*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 623},
+WindowMargins->{{158, Automatic}, {63, Automatic}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 642, 15, 66, "Input"],
+Cell[1224, 39, 194, 4, 29, "Output"],
+Cell[1421, 45, 192, 4, 29, "Output"],
+Cell[1616, 51, 245, 7, 55, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1898, 63, 768, 19, 102, "Input"],
+Cell[2669, 84, 351, 9, 29, "Output"],
+Cell[3023, 95, 256, 5, 29, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3316, 105, 458, 12, 29, "Input"],
+Cell[3777, 119, 1592, 33, 332, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5406, 157, 637, 18, 29, "Input"],
+Cell[6046, 177, 1694, 36, 330, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
