@@ -1,0 +1,41 @@
+def LinearLeastSquaresFit(x,y):
+    """Take in arrays representing (x,y) values for a set of linearly varying data and 
+    perform a linear least squares regression. Return the resulting slope and intercept 
+    parameters of the best fit line with their uncertainties."""
+    averagex = average(x)
+    averagey = average(y)
+    averagex2 = average(x**2)
+    averagexy = average(x*y)
+    m = (averagexy - (averagex*averagey))/(averagex2 - averagex**2)
+    b = (averagex2*averagey - averagex*averagexy)/(averagex2 - averagex**2)
+    s2 = average( (y-(m*x+b))**2 )
+    slerr = ( (1.0/(len(x)-2)) * (s2/((averagex2 - averagex**2))) )**(0.5)
+    interr = ( (1.0/(len(x)-2)) * ((s2*averagex2)/((averagex2 - averagex**2))) )**(0.5)
+    return m, b, slerr, interr
+
+
+def WeightedLinearLeastSquaresFit(x,y,w):
+    """Take in arrays representing (x,y) values for a set of linearly varying data
+    and an array of weights w.  Preform a weighted linear least squares regression.
+    Return the resulting slope and intercept parameters of the best fit line with
+    their uncertainties."""
+    wsum = sum(w)
+    wx = sum(x*w)
+    wx2 = sum(w*(x**2))
+    wy = sum(w*y)
+    wxy = sum(w*x*y)
+    m = (wsum*wxy-wx*wy)/(wsum*wx2 - (wx**2))
+    b = (wx2*wy-wx*wxy)/(wsum*wx2 - (wx**2))
+    if sum(w)/len(w) == 1:#if this equals 1, should behave like question 2
+        averagex = average(x)
+        averagey = average(y)
+        averagex2 = average(x**2)
+        averagexy = average(x*y)
+        dev = y - (m*x+b)
+        dev1 = average(dev**2)
+        slerr = ( (1.0/(len(x)-2)) * (dev1/((averagex2 - averagex**2))) )**(0.5)
+        interr = ( (1.0/(len(x)-2)) * ((dev1*averagex2)/((averagex2 - averagex**2))) )**(0.5)
+    else:
+        slerr = (wsum/((wsum*wx2) - (wx**2)))**0.5 #weighted slope error
+        interr = (wx2/(wsum*wx2 - wx**2))**0.5 #weighted intercept error
+    return m,b,slerr,interr
